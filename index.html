@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<HEAD>
+	<link rel="stylesheet" type="text/css" href="sketch.css">
+	    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+$(document).ready(function() {
+    for(var x = 0; x < 16; x++) {
+        for(var y = 0; y < 16; y++) {
+            var unit = $("<div class='unit'></div>");
+            unit.appendTo('#container');
+        }
+    }
+});
+
+
+
+    </script>
+   
+</HEAD>
+<body>
+
+
+<div id="container"></div>
+</body>
+</html>
