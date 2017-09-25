@@ -14,6 +14,14 @@ $(document).ready(function() {
             unit.appendTo('#container');
         }
     }
+    $('.unit').on('mouseenter', function() {
+    $(this).css('background-color', '#252b30');
+  });
+    $('button').on('click', function() {
+
+  $('.unit').css('background-color', 'blue');
+});
+
 });
 
 
@@ -23,7 +31,7 @@ $(document).ready(function() {
 </HEAD>
 <body>
 
-
+      <button class="clear">clear</button>
 <div id="container"></div>
 </body>
 </html>

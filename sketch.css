@@ -10,4 +10,12 @@
     margin: 1px;
     display: inline-block;
     float: left
+
 }
+
+.unit:hover{
+   background-color:#FF0000;
+}
+
+div.permahover {
+    background-color:#FF0000;}
