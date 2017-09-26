@@ -5,48 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="sketch.css">
 	    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript">
-
-var grid = 16;
-var cell = 600/grid;
-
-$(document).ready(function() {
-  drawBoard();
-
- $('.clear').click(newBoard);
-
-});
-
-
-function drawBoard() {
-  $('#container').empty();
-  cell = 600/grid;
-    for(var x = 0; x < grid; x++) {
-        for(var y = 0; y < grid; y++) {
-            var unit = $("<div class='unit'></div>");
-            unit.css({'width':cell+'px', 'height':cell + 'px'});
-            unit.appendTo('#container');
-        }
-    }
-    $('.unit').hover(function() {
-        $(this).css('background-color', '#252b30');
-        });
-
-};
-
-function newBoard(){
-   $('.unit').css("background-color", "white");
-   grid = prompt("what size grid would you like?");
-   drawBoard();
- }
-
-
-    </script>
+    <script src="sketch.js"></script>
    
 </HEAD>
 <body>
 
-      <button class="clear">clear</button>
+      <button class="clear">Reset</button>
 <div id="container"></div>
 </body>
 </html>
