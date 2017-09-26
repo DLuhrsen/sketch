@@ -1,15 +1,15 @@
 #container {
-    background-color: red;
-    height: 192px;
-    width: 192px;
+    width: 600px;
+    height: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 1px solid black;
 }
 .unit {
-    background-color: blue;
-    height: 10px;
-    width: 10px;
-    margin: 1px;
-    display: inline-block;
-    float: left
+  display: block;
+  float: left;
+  vertical-align: bottom;
+  box-sizing: border-box;
 
 }
 
@@ -19,3 +19,9 @@
 
 div.permahover {
     background-color:#FF0000;}
+
+.clear {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}

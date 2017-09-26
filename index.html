@@ -7,23 +7,38 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript">
 
+var grid = 16;
+var cell = 600/grid;
+
 $(document).ready(function() {
-    for(var x = 0; x < 16; x++) {
-        for(var y = 0; y < 16; y++) {
+  drawBoard();
+
+ $('.clear').click(newBoard);
+
+});
+
+
+function drawBoard() {
+  $('#container').empty();
+  cell = 600/grid;
+    for(var x = 0; x < grid; x++) {
+        for(var y = 0; y < grid; y++) {
             var unit = $("<div class='unit'></div>");
+            unit.css({'width':cell+'px', 'height':cell + 'px'});
             unit.appendTo('#container');
         }
     }
-    $('.unit').on('mouseenter', function() {
-    $(this).css('background-color', '#252b30');
-  });
-    $('button').on('click', function() {
+    $('.unit').hover(function() {
+        $(this).css('background-color', '#252b30');
+        });
 
-  $('.unit').css('background-color', 'blue');
-});
+};
 
-});
-
+function newBoard(){
+   $('.unit').css("background-color", "white");
+   grid = prompt("what size grid would you like?");
+   drawBoard();
+ }
 
 
     </script>
